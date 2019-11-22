@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.29'
+    implementation group: 'ch.qos.logback', 'name': 'logback-classic', 'version': '1.2.3'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'org.influxdb:influxdb-java:2.16'
+
+    annotationProcessor 'org.immutables:value:2.8.1'
+    compileOnly 'org.immutables:value:2.8.1'
+}
